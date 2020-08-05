@@ -73,6 +73,9 @@ function makePanel(panelObj /* what data does the panel need? */) {
   //  - the contents need to show (the 'toggle-on' class name controls this)
   panelButtons.addEventListener('click', evt => {
     // you
+    openButton.classList.toggle('hide-btn')
+    closeButton.classList.toggle('hide-btn')
+    panelContent.classList.toggle('toggle-on')
   })
 
   // don't forget to return the panel!
