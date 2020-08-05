@@ -82,13 +82,17 @@ function makePanel(panelObj /* what data does the panel need? */) {
   // don't forget to return the panel!
   return panel
 }
-const theDummyPanel = makePanel({ title: 'foo', content: 'bar' })
-accordion.appendChild(theDummyPanel)
+// const theDummyPanel = makePanel({ title: 'foo', content: 'bar' })
+// accordion.appendChild(theDummyPanel)
 
 
 // TASK 10- Loop through the panelData in the data folder
 //  creating panels for each content and title,
 //  and append them to the DOM
+panelData.forEach(panelObject => {
+  const thePanel = makePanel(panelObject)
+  accordion.appendChild(thePanel)
+})
 
 
 // [STRETCH] Comment out the links inside the nav and
