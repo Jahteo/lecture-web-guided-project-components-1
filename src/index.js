@@ -62,7 +62,10 @@ function makePanel(panelObj /* what data does the panel need? */) {
 
   // TASK 8- Set text content using arguments as raw material
   //  and also using the open and close arrows imported at the top of the file
-
+  panelTitle.textContent = panelObj.title
+  panelContent.textContent = panelObj.content
+  openButton.textContent = constants.open
+  closeButton.textContent = constants.close
 
   // TASK 9- When the 'open' or 'close' buttons are clicked, the content is toggled on/off:
   //  - the open button needs to go away (the 'hide-btn' class name controls this)
@@ -71,10 +74,10 @@ function makePanel(panelObj /* what data does the panel need? */) {
 
 
   // don't forget to return the panel!
-  return null
+  return panel
 }
-makePanel({ title: 'foo', content: 'bar' })
-
+const theDummyPanel = makePanel({ title: 'foo', content: 'bar' })
+accordion.appendChild(theDummyPanel)
 // TASK 10- Loop through the panelData in the data folder
 //  creating panels for each content and title,
 //  and append them to the DOM
