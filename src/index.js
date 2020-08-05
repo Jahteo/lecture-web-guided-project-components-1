@@ -100,3 +100,19 @@ panelData.forEach(panelObject => {
 // and returns an anchor tag with the right href, class and textContent.
 // Loop over the 'linkData' in the data folder, generate anchor tags
 // and append them to the nav.
+
+
+// function Panel(props) {
+//   return (
+//     <div>
+//       <div>
+//         <h3 className='title'>{props.title}</h3>
+//         <div>
+//           <button onClick={evt => { }}>{props.openLabel}</button>
+//           <button>{props.closeLabel}</button>
+//         </div>
+//       </div>
+//       <div>{props.content}</div>
+//     </div>
+//   )
+// }
